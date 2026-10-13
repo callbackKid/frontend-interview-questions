@@ -6,8 +6,10 @@ import { htmlQuestions } from './html';
 import { objectsOopQuestions } from './objects-oop';
 import { operatorsQuestions } from './operators';
 import { promisesQuestions } from './promises';
+import { reactQuestions } from './react';
 import { runtimeBrowserQuestions } from './runtime-browser';
 import type { QuizQuestion } from './types';
+import { typescriptQuestions } from './typescript';
 import { variablesScopeQuestions } from './variables-scope';
 
 export * from './types';
@@ -20,7 +22,9 @@ export {
   objectsOopQuestions,
   operatorsQuestions,
   promisesQuestions,
+  reactQuestions,
   runtimeBrowserQuestions,
+  typescriptQuestions,
   variablesScopeQuestions,
 };
 
@@ -35,4 +39,6 @@ export const ALL_QUESTIONS: QuizQuestion[] = [
   ...arraysStringsQuestions,
   ...runtimeBrowserQuestions,
   ...promisesQuestions,
+  ...reactQuestions,
+  ...typescriptQuestions,
 ];

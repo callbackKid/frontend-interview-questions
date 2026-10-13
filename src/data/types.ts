@@ -116,6 +116,37 @@ export const RUNTIME_BROWSER_SUBCATEGORIES = [
   'Compatibility',
 ] as const;
 
+export const REACT_SUBCATEGORIES = [
+  'Fundamentals',
+  'JSX & rendering',
+  'Components & patterns',
+  'State & data flow',
+  'Lifecycle & effects',
+  'Hooks',
+  'Concurrent features',
+  'Performance',
+  'Internals',
+  'Events',
+  'Routing',
+  'Security',
+] as const;
+
+export const TYPESCRIPT_SUBCATEGORIES = [
+  'Fundamentals',
+  'Basic types',
+  'Unions & literals',
+  'Objects & interfaces',
+  'Narrowing',
+  'Type operators',
+  'Generics',
+  'Advanced types',
+  'Functions',
+  'Classes',
+  'Modules & config',
+  'React',
+  'Practice',
+] as const;
+
 export type PromisesSubCategory = (typeof PROMISES_SUBCATEGORIES)[number];
 export type HtmlSubCategory = (typeof HTML_SUBCATEGORIES)[number];
 export type CssSubCategory = (typeof CSS_SUBCATEGORIES)[number];
@@ -126,6 +157,8 @@ export type FunctionsSubCategory = (typeof FUNCTIONS_SUBCATEGORIES)[number];
 export type ObjectsOopSubCategory = (typeof OBJECTS_OOP_SUBCATEGORIES)[number];
 export type ArraysStringsSubCategory = (typeof ARRAYS_STRINGS_SUBCATEGORIES)[number];
 export type RuntimeBrowserSubCategory = (typeof RUNTIME_BROWSER_SUBCATEGORIES)[number];
+export type ReactSubCategory = (typeof REACT_SUBCATEGORIES)[number];
+export type TypeScriptSubCategory = (typeof TYPESCRIPT_SUBCATEGORIES)[number];
 
 interface BaseQuestion {
   id: string;
@@ -146,6 +179,8 @@ export interface FunctionsQuestion extends BaseQuestion { theme: 'Functions'; su
 export interface ObjectsOopQuestion extends BaseQuestion { theme: 'Objects & OOP'; subCategory: ObjectsOopSubCategory; }
 export interface ArraysStringsQuestion extends BaseQuestion { theme: 'Arrays & strings'; subCategory: ArraysStringsSubCategory; }
 export interface RuntimeBrowserQuestion extends BaseQuestion { theme: 'Runtime & browser'; subCategory: RuntimeBrowserSubCategory; }
+export interface ReactQuestion extends BaseQuestion { theme: 'React'; subCategory: ReactSubCategory; }
+export interface TypeScriptQuestion extends BaseQuestion { theme: 'TypeScript'; subCategory: TypeScriptSubCategory; }
 
 export type QuizQuestion =
   | HtmlQuestion
@@ -157,5 +192,7 @@ export type QuizQuestion =
   | ObjectsOopQuestion
   | ArraysStringsQuestion
   | RuntimeBrowserQuestion
-  | PromisesQuestion;
+  | PromisesQuestion
+  | ReactQuestion
+  | TypeScriptQuestion;
 export type Theme = QuizQuestion['theme'];

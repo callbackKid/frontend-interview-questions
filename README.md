@@ -1,7 +1,7 @@
 # Interview drill
 
 A quiz app for frontend interview prep: HTML, CSS and JavaScript (data types, operators, variables & scope,
-functions, objects & OOP, arrays & strings, runtime & browser, promises), 556 questions.
+functions, objects & OOP, arrays & strings, runtime & browser, promises), React and TypeScript, 654 questions.
 React 18 + TypeScript + Vite. Everything runs locally; there is no backend and no AI call.
 
 ## Run it
@@ -44,7 +44,7 @@ src/
     types.ts            QuizQuestion, Level, subcategory lists
     html.ts css.ts promises.ts
     data-types.ts operators.ts variables-scope.ts functions.ts
-    objects-oop.ts arrays-strings.ts runtime-browser.ts
+    objects-oop.ts arrays-strings.ts runtime-browser.ts react.ts typescript.ts
     index.ts            ALL_QUESTIONS
   config/themes.ts      topics shown on the setup screen
   lib/

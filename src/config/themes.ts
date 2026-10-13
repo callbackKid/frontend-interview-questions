@@ -7,7 +7,9 @@ import {
   OBJECTS_OOP_SUBCATEGORIES,
   OPERATORS_SUBCATEGORIES,
   PROMISES_SUBCATEGORIES,
+  REACT_SUBCATEGORIES,
   RUNTIME_BROWSER_SUBCATEGORIES,
+  TYPESCRIPT_SUBCATEGORIES,
   VARIABLES_SCOPE_SUBCATEGORIES,
   type Level,
   type Theme,
@@ -37,6 +39,8 @@ export const THEMES: ThemeConfig[] = [
   { key: 'Arrays & strings', name: 'JavaScript', detail: 'Arrays & strings', subCategories: ARRAYS_STRINGS_SUBCATEGORIES },
   { key: 'Runtime & browser', name: 'JavaScript', detail: 'Runtime & browser', subCategories: RUNTIME_BROWSER_SUBCATEGORIES },
   { key: 'Promises', name: 'JavaScript', detail: 'Promises', subCategories: PROMISES_SUBCATEGORIES },
+  { key: 'React', name: 'React', subCategories: REACT_SUBCATEGORIES },
+  { key: 'TypeScript', name: 'TypeScript', subCategories: TYPESCRIPT_SUBCATEGORIES },
 ];
 
 export const LEVELS: Level[] = ['easy', 'medium', 'hard'];
