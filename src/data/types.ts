@@ -12,6 +12,7 @@ export const PROMISES_SUBCATEGORIES = [
   'Concurrency & cancellation',
   'React',
 ] as const;
+
 export const HTML_SUBCATEGORIES = [
   'Document basics',
   'Head & metadata',
@@ -32,6 +33,7 @@ export const HTML_SUBCATEGORIES = [
   'Validation',
   'HTML5 platform',
 ] as const;
+
 export const CSS_SUBCATEGORIES = [
   'Cascade & specificity',
   'Selectors',
@@ -55,9 +57,75 @@ export const CSS_SUBCATEGORIES = [
   'Shadow DOM styling',
 ] as const;
 
+export const DATA_TYPES_SUBCATEGORIES = [
+  'Primitives & objects',
+  'Type checking',
+  'Special values',
+  'Coercion',
+  'Collections',
+  'JSON',
+] as const;
+
+export const OPERATORS_SUBCATEGORIES = [
+  'Equality',
+  'Logical operators',
+  'Arithmetic',
+  'Spread & rest',
+  'Syntax & statements',
+] as const;
+
+export const VARIABLES_SCOPE_SUBCATEGORIES = [
+  'Declarations',
+  'Hoisting',
+  'Scope & closures',
+  'Execution context',
+  'Strict mode',
+] as const;
+
+export const FUNCTIONS_SUBCATEGORIES = [
+  'Basics',
+  'this & context',
+  'Higher-order functions',
+  'Functional techniques',
+  'Recursion',
+  'Generators',
+] as const;
+
+export const OBJECTS_OOP_SUBCATEGORIES = [
+  'Creating objects',
+  'Prototypes & inheritance',
+  'Properties',
+  'Immutability',
+  'Equality & copying',
+  'Classes & encapsulation',
+  'Paradigms & environment',
+] as const;
+
+export const ARRAYS_STRINGS_SUBCATEGORIES = [
+  'Array methods',
+  'Strings',
+  'Regular expressions',
+] as const;
+
+export const RUNTIME_BROWSER_SUBCATEGORIES = [
+  'Modules',
+  'Timers',
+  'Memory',
+  'Errors',
+  'Browser APIs',
+  'Compatibility',
+] as const;
+
 export type PromisesSubCategory = (typeof PROMISES_SUBCATEGORIES)[number];
 export type HtmlSubCategory = (typeof HTML_SUBCATEGORIES)[number];
 export type CssSubCategory = (typeof CSS_SUBCATEGORIES)[number];
+export type DataTypesSubCategory = (typeof DATA_TYPES_SUBCATEGORIES)[number];
+export type OperatorsSubCategory = (typeof OPERATORS_SUBCATEGORIES)[number];
+export type VariablesScopeSubCategory = (typeof VARIABLES_SCOPE_SUBCATEGORIES)[number];
+export type FunctionsSubCategory = (typeof FUNCTIONS_SUBCATEGORIES)[number];
+export type ObjectsOopSubCategory = (typeof OBJECTS_OOP_SUBCATEGORIES)[number];
+export type ArraysStringsSubCategory = (typeof ARRAYS_STRINGS_SUBCATEGORIES)[number];
+export type RuntimeBrowserSubCategory = (typeof RUNTIME_BROWSER_SUBCATEGORIES)[number];
 
 interface BaseQuestion {
   id: string;
@@ -71,6 +139,23 @@ interface BaseQuestion {
 export interface PromisesQuestion extends BaseQuestion { theme: 'Promises'; subCategory: PromisesSubCategory; }
 export interface HtmlQuestion extends BaseQuestion { theme: 'HTML'; subCategory: HtmlSubCategory; }
 export interface CssQuestion extends BaseQuestion { theme: 'CSS'; subCategory: CssSubCategory; }
+export interface DataTypesQuestion extends BaseQuestion { theme: 'Data types'; subCategory: DataTypesSubCategory; }
+export interface OperatorsQuestion extends BaseQuestion { theme: 'Operators'; subCategory: OperatorsSubCategory; }
+export interface VariablesScopeQuestion extends BaseQuestion { theme: 'Variables & scope'; subCategory: VariablesScopeSubCategory; }
+export interface FunctionsQuestion extends BaseQuestion { theme: 'Functions'; subCategory: FunctionsSubCategory; }
+export interface ObjectsOopQuestion extends BaseQuestion { theme: 'Objects & OOP'; subCategory: ObjectsOopSubCategory; }
+export interface ArraysStringsQuestion extends BaseQuestion { theme: 'Arrays & strings'; subCategory: ArraysStringsSubCategory; }
+export interface RuntimeBrowserQuestion extends BaseQuestion { theme: 'Runtime & browser'; subCategory: RuntimeBrowserSubCategory; }
 
-export type QuizQuestion = PromisesQuestion | HtmlQuestion | CssQuestion;
+export type QuizQuestion =
+  | HtmlQuestion
+  | CssQuestion
+  | DataTypesQuestion
+  | OperatorsQuestion
+  | VariablesScopeQuestion
+  | FunctionsQuestion
+  | ObjectsOopQuestion
+  | ArraysStringsQuestion
+  | RuntimeBrowserQuestion
+  | PromisesQuestion;
 export type Theme = QuizQuestion['theme'];
